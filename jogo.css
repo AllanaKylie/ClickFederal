@@ -1,0 +1,45 @@
+canvas {
+    width: 100%;
+    height: 50.5%;
+    background-color: rgba(8, 39, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    /*Letra*/
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo {
+    /*Nome Site*/
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    /*Menu*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui;
+    background: #000000;
+    height: 65px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    font-size: 16.5px;
+}

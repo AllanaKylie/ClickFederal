@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="jogo.html" class="logo">Click Federal</a>
+            <ul class="nav-list">
+                <li><a href="jogo.html">IFelse?</a></li>
+                <li><a href="tetris.html">Tetris</a></li>
+                <li><a href="football.html">Football</a></li>
+                <li><a href="#">Sinuca</a></li>
+                <li><a href="#">Pula</a></li>
+            </ul>
+        </nav>
+    </header>
+    <audio id="sfxPoint">
+        <source src="assets/point.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <h2 id="placar">Placar:</h2>
+    <table>
+        <td>
+            <h2 style="color:red; font-weight: lighter;" id="player0points">0</h2>
+        </td>
+        <td>
+            <h2 style="font-weight: lighter;">x</h2>
+        </td>
+        <td>
+            <h2 style="color:blue; font-weight: lighter;" id="player1points">0</h2>
+        </td>
+    </table>
+    <canvas id="myCanvas" width="600" height="600"></canvas>
+        <script src="football.js"></script>
+    <link rel="stylesheet" type="text/css" href="football.css" media="screen" />
+</body>
+
+</html>
