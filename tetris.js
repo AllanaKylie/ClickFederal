@@ -404,18 +404,6 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-function gameOver() {
-    const gameOverMessage = document.getElementById("game-over-message");
-    gameOverMessage.style.display = "block";
-  
-    const playAgainButton = document.getElementById("play-again-button");
-    playAgainButton.addEventListener("click", () => {
-      gameOverMessage.style.display = "none";
-      resetaJogador();
-      updateScore();
-    });
-  }
-
 resetaJogador();
 updateScore();
 update();  
