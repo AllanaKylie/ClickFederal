@@ -40,6 +40,8 @@ const randomColor = () => {
     return color[random];
 }
 
+let previousColor = "#fff";
+
 const food = {
     x: randomPosition(),
     y: randomPosition(),
@@ -59,11 +61,11 @@ const drawFood = () => {
 }
 
 const drawSnake = () => {
-    ctx.fillStyle = ctx.shadowColor
+    ctx.fillStyle = previousColor
 
     snake.forEach((position, index) => {
         if (index == snake.length - 1) {
-            ctx.fillStyle = ctx.shadowColor
+            ctx.fillStyle = previousColor
         }
         ctx.fillRect(position.x, position.y, size, size)
     })
@@ -126,9 +128,10 @@ const chackEat = () => {
             y = randomPosition()
         }
 
-        food.x = x
-        food.y = y
-        food.color = randomColor()
+        food.x = x;
+        food.y = y;
+        previousColor = food.color;
+        food.color = randomColor();
     }
 }
 
