@@ -23,6 +23,23 @@ body {
   margin-right: 17%;
 }
 
+#placar {
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 0px;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 35px;
+  font-family: sans-serif;
+  align-items: center;
+  align-content: center;
+}
+
 a {
   /*Letra*/
   color: #ffffff;
@@ -57,4 +74,3 @@ nav {
   margin-left: 32px;
   font-size: 16.5px;
 }
-
