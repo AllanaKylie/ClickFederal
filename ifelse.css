@@ -5,15 +5,15 @@
 }
 
 .letter-yellow {
-    color: #c79c2e;
+    color: #e6dc53;
 }
 
 .letter-green {
-    color: #51b36e;
+    color: #46d671;
 }
 
 .letter-red {
-    color: #943e3c;
+    color: #b83b39;
 }
 
 .app-container {
@@ -55,17 +55,17 @@
 }
 
 .right {
-    background-color: #51b36e;
+    background-color: #46d671;
     color: #f4f3f1;
 }
 
 .wrong {
-    background-color: #943e3c;
+    background-color: #a41816;
     color: #f4f3f1;
 }
 
 .displaced {
-    background-color: #c79c2e;
+    background-color: #d6cb31;
     color: #f4f3f1;
 }
 
