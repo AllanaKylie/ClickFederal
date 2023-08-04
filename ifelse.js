@@ -14,19 +14,10 @@ let currentRow = 0;
 let currentColumn = 0;
 
 const palavras = [
-  "ADUBO",
-  "AGORA",
-  "AGUIA",
-  "ALGUM",
-  "AMEBA",
-  "APITO",
-  "AZEDO",
-  "BRUTO",
-  "BERCO",
-  "BARBA",
-  "BOLDO",
+  "BRIGA",
+  "BALDE",
   "CALDO",
-  "CARTA",
+  "COSTA",
   "CASCO",
   "CHUVA",
   "CIRCO",
@@ -38,28 +29,28 @@ const palavras = [
   "GOLPE",
   "GRITO",
   "HASTE",
-  "IDOLO",
+  "HIENA",
   "IGUAL",
   "IMPAR",
-  "JANTA",
+  "JUNTO",
   "JEITO",
-  "MOLHO",
+  "ZEBRA",
   "NORTE",
-  "OBVIO",
+  "OSTRA",
   "OLHAR",
   "ORDEM",
-  "PALMA",
+  "PUNHO",
   "PARTO",
-  "PIADA",
+  "PAVIO",
   "POSTE",
   "ROCHA",
   "SALTO",
-  "TABUA",
-  "TAMPA",
+  "TREVO",
+  "TRUTA",
   "UNICO",
   "URINA",
   "VACUO",
-  "VARAL",
+  "VERSO",
   "VASTO"
 ];
 
@@ -115,7 +106,7 @@ const checkGuess = () => {
     return
   } {
     if (currentRow === rows - 1) {
-      window.alert("Game over! Recarregue a página para jogar de novo.")
+      window.alert("Game over! Recarregue a página para jogar de novo. \nA palavra era: " + letreco)
     } else {
       moveToNextRow()
     }
