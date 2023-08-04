@@ -351,7 +351,7 @@ function update(tempo = 0) {
     dropCounter += deltaTempo;
     if (dropCounter > dropInterval) {
         dropJogador();
-    }  
+    }
     ultTempo = tempo;
     desenha();
     requestAnimationFrame(update);
@@ -362,18 +362,18 @@ function update1(tempo1 = 0) {
     dropCounter1 += deltaTempo1;
     if (dropCounter1 > dropInterval1) {
         dropJogador1();
-    }  
+    }
     ultTempo1 = tempo1;
     desenha1();
     requestAnimationFrame(update1);
 }
 
 function updateScore() {
-    document.getElementById("score").innerText = "Score - Player 1: " + jogador.score;
+    document.getElementById("score").innerText = jogador.score;
 }
 
 function updateScore1() {
-    document.getElementById("score1").innerText = "Score - Player 2: " + jogador1.score1;
+    document.getElementById("score1").innerText = jogador1.score1;
 }
 
 document.addEventListener("keydown", (event) => {
@@ -406,7 +406,7 @@ document.addEventListener("keydown", (event) => {
 
 resetaJogador();
 updateScore();
-update();  
+update();
 
 resetaJogador1();
 updateScore1();
