@@ -22,16 +22,22 @@
             </ul>
         </nav>
     </header>
-    <header>
-        <div id="score" class="score-item"></div>
-        <div id="score1" class="score-item"></div>
-    </header>
+
+    <h2 id="placar">Placar:</h2>
+    <table>
+        <td>
+            <div id="score" class="score-item" style="color:red; font-weight: lighter; font-size: 40px;"></div>
+        </td>
+        <td>
+            <div style="font-weight: lighter;">x</div>
+        </td>
+        <td>
+            <div id="score1" class="score-item" style="color:blue; font-weight: lighter; font-size: 40px;"></div>
+        </td>
+    </table>
+
     <canvas id="tetris" width="240" height="400"></canvas>
     <canvas id="tetris1" width="240" height="400"></canvas>
-    <div id="game-over-message" style="display: none;">
-        <p>Game Over</p>
-        <button id="play-again-button">Jogar Novamente</button>
-    </div>
     <script src="tetris.js"></script>
 </body>
 
