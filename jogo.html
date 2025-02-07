@@ -1,17 +1,89 @@
 <!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="jogo.css" />
-
     <link rel="icon" href="./assets/clickFederal.png" type="image/png">
     <title>Click Federal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <style>
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Karma", sans-serif;
+        }
+
+        .w3-bar-block .w3-bar-item {
+            padding: 20px
+        }
+
+        body {
+            background-color: rgba(73, 90, 71, 0.747);
+        }
+
+        .space {
+            padding-right: 53px;
+        }
+
+        .spaceBaixo {
+            padding-top: 65px;
+        }
+
+        .logo {
+            /*Nome Site*/
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            /*Letra*/
+            color: #ffffff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav {
+            /*Menu*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: system-ui;
+            background: #000000;
+            height: 65px;
+        }
+
+        h1 {
+            font-family: system-ui;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-list li {
+            letter-spacing: 3px;
+            margin-left: 32px;
+            font-size: 16.5px;
+        }
+    </style>
 </head>
 
 <body>
+
     <header>
         <nav>
             <a href="jogo.html" class="logo">Click Federal</a>
@@ -23,10 +95,86 @@
                 <li><a href="football.html">Football</a></li>
             </ul>
         </nav>
+
     </header>
 
-    <canvas id="myCanvas" width="100%" height="50.5%"></canvas>
-    <script src="jogo.js"></script>
+    <div class="w3-main w3-content w3-padding" style="max-width:1100px;margin-top:37px">
+
+        <div class="w3-container w3-padding-10 w3-center">
+            <h1>Click Federal</h1><br>
+            <img id="imagem" src="./assets/IfelsePrint.png" style="display:block;margin:auto;border: 1px solid #a0a0a0"
+                width="500px" height="500px"> <br>
+            <a id="botao-anterior" href="#" class="w3-bar-item w3-button w3-hover-black"
+                onclick="mudarImagem(indiceAtual - 1); return false;">«</a>
+            <a id="botao-proximo" href="#" class="w3-bar-item w3-button w3-hover-black"
+                onclick="mudarImagem(indiceAtual + 1); return false;">»</a>
+            <div class="w3-padding-32">
+                <h4 style="padding-left: 10px"><b>Sejam bem vindos ao Click Federal</b></h4>
+                <p style="text-align: justify">Click Federal, o portal virtual de entretenimento educacional!
+                    Nosso objetivo é proporcionar uma experiência única de aprendizado através de jogos envolventes e
+                    interativos.
+                </p>
+                <br>
+                <p style="text-align: justify">
+                    Nossa missão é tornar o lazer acessível a todos, sem pressão, e oferecer uma plataforma que motive a
+                    busca por aprendizado contínuo. Convidamos todos vocês a explorarem o nosso site, aprenderem
+                    brincando e
+                    compartilharem momentos de diversão e crescimento intelectual conosco.
+                </p>
+                <br>
+                <p style="text-align: justify">
+                    Allana e Arthur são os talentosos membros fundadores da equipe Click Federal.
+                    Ambos são apaixonados por educação, tecnologia e jogos, e foi essa combinação de interesses que os
+                    levou a criar esse projeto inovador.
+                    Esperamos que gostem e vamos juntos embarcar nessa jornada educativa! Clique, jogue e divirta-se no
+                    Click Federal!
+                </p>
+            </div>
+        </div>
+
+        <footer class="w3-row-padding w3-padding-32">
+            <div class="w3-third">
+                <h3 style="margin-bottom: 0px; color: rgb(0, 0, 0);"><b>Redes Sociais</b></h3>
+                <p style="margin-top: 5px; margin-bottom: 0px">GitHub: @AllanaKylie / @axthur</p>
+            </div>
+            <div class="w3-third w3-serif">
+                <h3 style="color: rgb(0, 0, 0);"><b>Outras Páginas</b></h3>
+                <p>
+                    <span class="w3-tag w3-black w3-margin-bottom">Click Federal</span> <span
+                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IFelse?</span> <span
+                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Tetris</span>
+                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">SnackGame</span> <span
+                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Voleyball</span> <span
+                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Football</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        var imagens = ["./assets/IfelsePrint.png", "./assets/TetrisPrint.png", "./assets/CobraPrint.png",
+            "./assets/VolleyPrint.png", "./assets/FootballPrint.png"];
+
+        var indiceAtual = 0;
+
+        function mudarImagem(novoIndice) {
+            if (novoIndice < 0 || novoIndice >= imagens.length) {
+                return;
+            }
+            indiceAtual = novoIndice;
+            document.getElementById("imagem").src = imagens[indiceAtual];
+        }
+
+        document.getElementById("botao-anterior").addEventListener("click", function () {
+            mudarImagem(indiceAtual);
+        });
+
+        document.getElementById("botao-proximo").addEventListener("click", function () {
+            mudarImagem(indiceAtual);
+        });
+
+    </script>
 
 </body>
 
